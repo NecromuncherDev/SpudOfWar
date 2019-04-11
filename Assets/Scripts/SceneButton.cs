@@ -2,17 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private string sceneName;
+
+    private void Start()
     {
-        
+        sceneName = gameObject.GetComponentInChildren<Text>().text;
+        if (sceneName == "Button") // Change to "not in scene list"
+        {
+            gameObject.GetComponent<Button>().interactable = false;
+        }
+        Debug.Log(sceneName);
     }
 
-    public void LoadScene(int level)
+    public void LoadScene()
     {
-        SceneManager.LoadScene(level);
+        SceneManager.LoadScene(sceneName);
     }
 }
