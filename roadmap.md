@@ -1,8 +1,8 @@
 #Planned Features Description
 1. Menu:
 	- Must have:
-		- On 'esc' on any scene a menu should appear (dontDestroyOnLoad?)
-		- It will pause the game (if in 'level' scene)
+		- On 'esc' on any scene a menu should appear (dontDestroy on load + singleton / menu prefab in each scene)
+		- ~~It will pause the game (if in 'level' scene)~~
 		- It will have a clickable button for every scene (for now just the store but the code will be built for scaling)
 	- Nice to have:
 		- Slow down music while menu is open.
@@ -10,7 +10,7 @@
 
 2. Store
 	- Must have:
-		- A new 'store' scene
+		- ~~A new 'store' scene~~
 		- A scrollable item inventory with 'owned' / 'not owned' labels
 		- An option to own the item *permanently* (save file?)
 	- Nice to have:
