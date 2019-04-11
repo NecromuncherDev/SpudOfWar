@@ -14,7 +14,6 @@ public class ReadSceneNames : MonoBehaviour
             //
             string name = S.path.Substring(S.path.LastIndexOf('/') + 1);
             name = name.Substring(0,name.LastIndexOf('.'));
-            Debug.Log(name);
             //
             if (S.enabled)
             {
@@ -24,11 +23,14 @@ public class ReadSceneNames : MonoBehaviour
             }
         }
         //
-        // Foreach s in toarray
-        // print s to log
+        foreach (string scene in temp.ToArray())
+        {
+            Debug.Log("'" + scene + "' was added to the list of scenes." );
+        }
         //
         return temp.ToArray();
     }
+
     [UnityEditor.MenuItem("ReadSceneNames/Update Scene Names")]
     private static void UpdateNames(UnityEditor.MenuCommand command)
     {
